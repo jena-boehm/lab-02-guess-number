@@ -35,6 +35,7 @@ guessButton.addEventListener('click', () => {
 
     // WIN
     if (comparedResult === 0) {
+        document.getElementById("guess-button").disabled = true;
         return results.textContent = 'You win! Congrats!';
     }
 
