@@ -7,7 +7,7 @@ const results = document.getElementById('results');
 const resetButton = document.getElementById('reset-button');
 
 // initialize state
-let totalGuesses = 3;
+let totalGuesses = 4;
 let correctNumber = Math.floor(Math.random() * 15);
 
 // set event listeners to update state and DOM
@@ -19,6 +19,7 @@ guessButton.addEventListener('click', () => {
 
     // LOSE
     if (totalGuesses === 0) {
+        document.getElementById("guess-button").disabled = true;
         return results.textContent = 'You are out of guesses! You lose!';
     }
 
